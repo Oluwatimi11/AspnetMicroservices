@@ -4,31 +4,30 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <DockerComposeProjectPath>../../../docker-compose.dcproj</DockerComposeProjectPath>
-    <UserSecretsId>c2aa58d9-af3d-4e48-ae8b-8c2b22e48927</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " />
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="MongoDB.Driver" />
     <None Remove="Controllers\" />
     <None Remove="Entities\" />
-    <None Remove="Data\" />
-    <None Remove="Repositories\" />
+    <None Remove="Microsoft.Extensions.Caching.StackExchangeRedis" />
     <None Remove="Extensions\" />
+    <None Remove="Repositories\" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Entities\" />
-    <Folder Include="Data\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>
